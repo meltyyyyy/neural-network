@@ -10,7 +10,7 @@ def execute():
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=42)
 
-    mlp = MLPClassifier(solver='lbfgs', random_state=0,hidden_layer_sizes=[10]).fit(X_train, y_train)
+    mlp = MLPClassifier(solver='lbfgs', random_state=0,hidden_layer_sizes=[10,10]).fit(X_train, y_train)
 
     fig = plt.figure()
     mglearn.plots.plot_2d_separator(mlp, X_train, fill=True, alpha=.3)
