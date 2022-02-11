@@ -6,6 +6,13 @@ def sigmoid(x):
 def identity_function(x):
     return x
 
+def softmax(a):
+    c = np.max(a)
+    exp_a = np.exp(a - c)
+    sum_exp_a = np.sum(exp_a)
+    y = exp_a / sum_exp_a
+    return y
+
 X = np.array([1.0,0.5])
 W1 = np.array([[0.1,0.3,0.5],[0.2,0.4,0.6]])
 B1 = np.array([0.1,0.2,0.3])
